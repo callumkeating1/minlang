@@ -10,11 +10,6 @@
 // varadd name value
 // varset ${name} value
 
-struct pair {
-    keywords keyword;
-    std::string value;
-};
-
 keywords convertToKeyword(std::string word) {
     auto it = keywordMap.find(word);
     if (it != keywordMap.end()) {
@@ -49,9 +44,4 @@ pair lex(std::string line) {
         }
     }
     return linePair;
-}
-
-int main() {
-    pair user = lex("PRINT hello");
-    return 0;
 }
